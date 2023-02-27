@@ -4,7 +4,7 @@ import FormField from "../FormField";
 import { contactFields } from "./fields";
 import Button from "../../ui/Button";
 
-const ONLY_NUMBERS = /^\d{3}(-\d{2}){2}$/;
+const ONLY_NUMBERS = /^[0-9]+$/;
 
 const validationSchema = object({
   userName: string()
@@ -13,8 +13,8 @@ const validationSchema = object({
     .required('Required')
     .email('Invalid email format'),
   phone: string()
-    .required('Required')
     .matches(ONLY_NUMBERS, 'Must be only numbers')
+    .required('Required')
     .min(12)
 })
 

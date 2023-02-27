@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import ContactForm from "../ContactForm";
 import './App.scss';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
 
   return (
     <main className="app">
-
+      <ContactForm />
     </main>
   );
 }
